@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Hub - Learn Java from Beginner to Expert</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">Study Hub</h1>
+                <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item active">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Home</span>
+                </a>
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Progress</span>
+                </a>
+                
+                <div class="nav-section">Learning Paths</div>
+                
+                <div class="nav-group">
+                    <button class="nav-item nav-collapse" data-target="beginner-menu">
+                        <span class="nav-icon">🌱</span>
+                        <span class="nav-text">Beginner</span>
+                        <span class="collapse-icon">›</span>
+                    </button>
+                    <div class="nav-submenu" id="beginner-menu">
+                        <a href="lessons/beginner-1.html" class="nav-subitem">Introduction to Java</a>
+                        <a href="lessons/beginner-2.html" class="nav-subitem">Variables & Data Types</a>
+                        <a href="lessons/beginner-3.html" class="nav-subitem">Control Flow</a>
+                    </div>
+                </div>
+                
+                <div class="nav-group">
+                    <button class="nav-item nav-collapse" data-target="intermediate-menu">
+                        <span class="nav-icon">🚀</span>
+                        <span class="nav-text">Intermediate</span>
+                        <span class="collapse-icon">›</span>
+                    </button>
+                    <div class="nav-submenu" id="intermediate-menu">
+                        <a href="lessons/intermediate-1.html" class="nav-subitem">OOP Fundamentals</a>
+                        <a href="lessons/intermediate-2.html" class="nav-subitem">Collections Framework</a>
+                        <a href="lessons/intermediate-3.html" class="nav-subitem">Exception Handling</a>
+                    </div>
+                </div>
+                
+                <div class="nav-group">
+                    <button class="nav-item nav-collapse" data-target="advanced-menu">
+                        <span class="nav-icon">⚡</span>
+                        <span class="nav-text">Advanced</span>
+                        <span class="collapse-icon">›</span>
+                    </button>
+                    <div class="nav-submenu" id="advanced-menu">
+                        <a href="lessons/advanced-1.html" class="nav-subitem">Multithreading</a>
+                        <a href="lessons/advanced-2.html" class="nav-subitem">Streams & Lambdas</a>
+                        <a href="lessons/advanced-3.html" class="nav-subitem">Design Patterns</a>
+                    </div>
+                </div>
+                
+                <div class="nav-group">
+                    <button class="nav-item nav-collapse" data-target="expert-menu">
+                        <span class="nav-icon">💎</span>
+                        <span class="nav-text">Expert</span>
+                        <span class="collapse-icon">›</span>
+                    </button>
+                    <div class="nav-submenu" id="expert-menu">
+                        <a href="lessons/expert-1.html" class="nav-subitem">JVM Internals</a>
+                        <a href="lessons/expert-2.html" class="nav-subitem">Performance Tuning</a>
+                        <a href="lessons/expert-3.html" class="nav-subitem">Advanced Patterns</a>
+                    </div>
+                </div>
+                
+                <a href="about.html" class="nav-item">
+                    <span class="nav-icon">ℹ️</span>
+                    <span class="nav-text">About</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <p class="branding">Study Hub – made by Chris Iver.</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search lessons..." id="searchInput">
+                    <span class="search-icon">🔍</span>
+                </div>
+                
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon sun">☀️</span>
+                    <span class="theme-icon moon">🌙</span>
+                </button>
+            </header>
+
+            <div class="content-wrapper">
+                <div class="hero-section">
+                    <h1 class="hero-title">Master Java Programming</h1>
+                    <p class="hero-subtitle">From absolute beginner to expert developer – comprehensive, hands-on learning paths designed for real-world success.</p>
+                    <div class="hero-cta">
+                        <a href="lessons/beginner-1.html" class="btn btn-primary">Start Learning</a>
+                        <a href="dashboard.html" class="btn btn-secondary">View Progress</a>
+                    </div>
+                </div>
+
+                <section class="learning-paths">
+                    <h2 class="section-title">Choose Your Learning Path</h2>
+                    
+                    <div class="path-grid">
+                        <div class="path-card">
+                            <div class="path-icon">🌱</div>
+                            <h3 class="path-title">Beginner</h3>
+                            <p class="path-description">Start your Java journey with fundamentals: syntax, variables, control structures, and basic OOP concepts.</p>
+                            <ul class="path-topics">
+                                <li>Java Syntax & Setup</li>
+                                <li>Data Types & Variables</li>
+                                <li>Control Flow Statements</li>
+                                <li>Methods & Functions</li>
+                            </ul>
+                            <a href="lessons/beginner-1.html" class="path-link">Start Path →</a>
+                        </div>
+
+                        <div class="path-card">
+                            <div class="path-icon">🚀</div>
+                            <h3 class="path-title">Intermediate</h3>
+                            <p class="path-description">Deepen your knowledge with OOP principles, collections, generics, and exception handling.</p>
+                            <ul class="path-topics">
+                                <li>Object-Oriented Programming</li>
+                                <li>Collections Framework</li>
+                                <li>Generics & Type Safety</li>
+                                <li>File I/O & Serialization</li>
+                            </ul>
+                            <a href="lessons/intermediate-1.html" class="path-link">Start Path →</a>
+                        </div>
+
+                        <div class="path-card">
+                            <div class="path-icon">⚡</div>
+                            <h3 class="path-title">Advanced</h3>
+                            <p class="path-description">Master concurrency, streams, lambdas, and modern Java features for production-ready applications.</p>
+                            <ul class="path-topics">
+                                <li>Multithreading & Concurrency</li>
+                                <li>Streams API & Lambdas</li>
+                                <li>Design Patterns</li>
+                                <li>Build Tools (Maven/Gradle)</li>
+                            </ul>
+                            <a href="lessons/advanced-1.html" class="path-link">Start Path →</a>
+                        </div>
+
+                        <div class="path-card">
+                            <div class="path-icon">💎</div>
+                            <h3 class="path-title">Expert</h3>
+                            <p class="path-description">Optimize performance, understand JVM internals, and architect enterprise-level applications.</p>
+                            <ul class="path-topics">
+                                <li>JVM Architecture & Memory</li>
+                                <li>Garbage Collection Tuning</li>
+                                <li>Performance Profiling</li>
+                                <li>Advanced Design Patterns</li>
+                            </ul>
+                            <a href="lessons/expert-1.html" class="path-link">Start Path →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="features-section">
+                    <h2 class="section-title">Why Study Hub?</h2>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">📚</div>
+                            <h3>Comprehensive Curriculum</h3>
+                            <p>From basics to expert-level topics, all in one place</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">💻</div>
+                            <h3>Hands-On Practice</h3>
+                            <p>Interactive code examples and real-world exercises</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📊</div>
+                            <h3>Track Progress</h3>
+                            <p>Monitor your learning journey with detailed analytics</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🎯</div>
+                            <h3>Quiz Yourself</h3>
+                            <p>Test your knowledge with instant feedback</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
