@@ -1,0 +1,9 @@
+{
+  "name": "study-hub",
+  "version": "1.0.0",
+  "description": "Professional educational platform for learning Java programming",
+  "main": "index.html",
+  "keywords": ["java", "education", "learning", "programming"],
+  "author": "Chris Iver",
+  "license": "MIT"
+}
